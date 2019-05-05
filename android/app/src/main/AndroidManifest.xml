@@ -2,6 +2,7 @@
     package="com.ruvy.vip">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 
 

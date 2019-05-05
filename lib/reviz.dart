@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
-
+import 'package:vip/model/player.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'dart:async';
 
 class Reviz extends StatefulWidget{
+
+  final Player player;
+  Reviz(this.player);
+
   @override
   State<StatefulWidget> createState() {
     return new RevizState();
@@ -21,6 +27,7 @@ class RevizState extends State<Reviz> {
             child: new Column(
               children: <Widget>[
                 new Padding(padding: EdgeInsets.all(15.0)),
+                new Padding(padding: EdgeInsets.all(10.0)),
 
                 new Container (
                   alignment: Alignment.center,
@@ -37,9 +44,14 @@ class RevizState extends State<Reviz> {
                     ],
                   ),
                 ),
+                new Padding(padding: EdgeInsets.all(10.0)),
 
+                new Text("Le reviz'dex n'a pas réussi à être implémenté",
+                  style: new TextStyle(
+                      fontSize: 15.0
+                  ),),
                 //image
-                new Padding(padding: EdgeInsets.all(.0)),
+                new Padding(padding: EdgeInsets.all(10.0)),
 
 
 
