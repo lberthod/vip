@@ -6,7 +6,7 @@
 List<DocumentSnapshot> fixedLengthList =  new List();
 
 
-class PlayerC extends StatefulWidget{
+class introR extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
     return new PState();
@@ -20,92 +20,12 @@ class user{
   user({this.id, this.name, this.score});
 }
 
-class PState extends State<PlayerC> {
+class PState extends State<introR> {
   @override
 
-  Widget _buildListItem(BuildContext context, DocumentSnapshot document) {
-    TextEditingController addController = TextEditingController();
-    TextEditingController removeController = TextEditingController();
-
-    return ListTile(
-      title: Row(
-        children: [
-          Expanded(
-            child: Text(
-              document['name'].toString() ,
-              style: Theme
-                  .of(context)
-                  .textTheme
-                  .headline,
-            ),
-          ),
-
-
-          Container(
-            decoration: const BoxDecoration(
-              color: Color(0xffddddff),
-            ),
-            padding: const EdgeInsets.all(10.0),
-            child: Text(
-              document['score'].toString(),
-              style: Theme
-                  .of(context)
-                  .textTheme
-                  .display1,
-            ),
-          ),
-        ],
-      ),
-      onTap: () {
-        //document.reference.updateData({'stocks': document['stocks'] + 1});
-      },
-    );
-  }
-
-  Future<List<DocumentSnapshot>> getSeedID() async{
-
-    var data = await Firestore.instance.collection('user').where("id", isEqualTo: ide).getDocuments();
-    var productList = data.documents;
-
-    List<user> userL = [];
-
-    for ( int i = 0 ; i < productList.length ; i++ ){
-      var newU = new user(id:1 ,name : "s" ,score : 3);
-      userL.add(newU);}
-
-
-
-
-    for ( int i = 0 ; i < userL.length; i ++){
-      print("cet" + userL[i].id.toString());
-
-    }
-
-
-
-    final collRef = Firestore.instance.collection('gameLevels');
-    DocumentReference docReferance = collRef.document();
-    var moviesTitles = ['Inception', 'Heat', 'Spider Man'];
-
-
-
-
-
-
-
-    return productList;
-  }
 
   Widget build(BuildContext context) {
 
-    Firestore.instance.collection('users').document()
-        .setData({ 'title': 'title', 'author': 'author' });
-
-    var collectionReference =  Firestore.instance.collection('cities');
-    var query = collectionReference.where("id", isEqualTo: ide);
-
-
-    var document =   Firestore.instance.collection('user').where("id", isEqualTo: ide).getDocuments();
 
 
 
@@ -136,21 +56,21 @@ class PState extends State<PlayerC> {
 
             new Padding(padding: EdgeInsets.all(8.0)),
 
-            new Text("Merci de définir avec quel joueur tu joues." , style: new TextStyle(
+            new Text("Bienvenu dans le Reviz'Dex" , style: new TextStyle(
                 fontSize: 18,
                 color: Colors.black
             ),),
             new Padding(padding: EdgeInsets.all(8.0)),
-            new Text("Actuellement je joue avec  : " + username),
+            new Text("Choisi le domaine à réviser"),
 
             new Padding(padding: EdgeInsets.all(20.0)),
             new MaterialButton(
                 height: 50.0,
                 color: Colors.green,
-                onPressed:(){Navigator.of(context).pushNamed('/intro');
-                  username = "diana";
-                  indexPlayer = 0;},
-                child: new Text("Diana",
+                onPressed:() {
+                  Navigator.of(context).pushNamed('/revizdexMarketing');
+                },
+                child: new Text("Marketing",
                   style: new TextStyle(
                       fontSize: 18,
                       color: Colors.white
@@ -162,10 +82,9 @@ class PState extends State<PlayerC> {
             new MaterialButton(
                 height: 50.0,
                 color: Colors.green,
-                onPressed:(){Navigator.of(context).pushNamed('/intro');
-                username = "leo";
-                indexPlayer = 2;},
-                child: new Text("Léonard",
+                onPressed:(){Navigator.of(context).pushNamed('/revizdexAchat');
+               },
+                child: new Text("Achat",
                   style: new TextStyle(
                       fontSize: 18,
                       color: Colors.white
@@ -177,10 +96,9 @@ class PState extends State<PlayerC> {
             new MaterialButton(
                 height: 50.0,
                 color: Colors.green,
-                onPressed:(){Navigator.of(context).pushNamed('/intro');
-                username = "fatou";
-                indexPlayer = 3;},
-                child: new Text("Fatou-Maty",
+                onPressed:(){Navigator.of(context).pushNamed('/revizdexAdmin');
+              },
+                child: new Text("Administration",
                   style: new TextStyle(
                       fontSize: 18.0,
                       color: Colors.white
@@ -192,10 +110,38 @@ class PState extends State<PlayerC> {
             new MaterialButton(
                 height: 50.0,
                 color: Colors.green,
-                onPressed:(){Navigator.of(context).pushNamed('/intro');
-                username = "pastora";
-                indexPlayer = 1;},
-                child: new Text("Pastora",
+                onPressed:(){Navigator.of(context).pushNamed('/revizdexCompta');
+                },
+                child: new Text("Comptabilité",
+                  style: new TextStyle(
+                      fontSize: 18.0,
+                      color: Colors.white
+                  ),)
+            ),
+
+            new Padding(padding: EdgeInsets.all(8.0)),
+            new Padding(padding: EdgeInsets.all(8.0)),
+            new MaterialButton(
+                height: 50.0,
+                color: Colors.green,
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/revizdexVente');
+                },
+                child: new Text("Vente",
+                  style: new TextStyle(
+                      fontSize: 18.0,
+                      color: Colors.white
+                  ),)
+            ),
+
+            new Padding(padding: EdgeInsets.all(8.0)),
+            new MaterialButton(
+                height: 50.0,
+                color: Colors.green,
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/revizdexRH');
+                },
+                child: new Text("Ressources humaines",
                   style: new TextStyle(
                       fontSize: 18.0,
                       color: Colors.white

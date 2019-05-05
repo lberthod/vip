@@ -57,7 +57,7 @@ class ExperFinState extends State<ExpertFin> {
                   child: new Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      new Text(items[0].manon),
+                      new Text("Manon :" + items[0].manon),
                       new Padding(padding: EdgeInsets.all(8.0)),
                       new MaterialButton(
                           height: 50.0,
