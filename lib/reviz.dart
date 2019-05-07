@@ -46,7 +46,7 @@ class RevizState extends State<Reviz> {
                 ),
                 new Padding(padding: EdgeInsets.all(10.0)),
 
-                new Text("Le reviz'dex n'a pas réussi à être implémenté",
+                new Text("Le Reviz'dex n'a pas encore été implémenté.",
                   style: new TextStyle(
                       fontSize: 15.0
                   ),),
