@@ -54,7 +54,7 @@ class _MyAppState extends State<Scan> {
                 children: <Widget>[
                   new Padding(padding: EdgeInsets.all(10.0)),
                   new Text(
-                    "Trouvez un QR code dans l'école et scannez le.",
+                    "Trouve un QR code dans l'école et scanne le.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -62,18 +62,18 @@ class _MyAppState extends State<Scan> {
                     ),
                   ),
                   new Padding(padding: EdgeInsets.all(10.0)),
-                  new Text("Il y a différents QR Code :",
+                  new Text("Il y a différents QR Codes :",
                       textAlign: TextAlign.center),
                   new Padding(padding: EdgeInsets.all(10.0)),
-                  new Text("Les QR Code Jaune permettent de défier un expert.",
-                      textAlign: TextAlign.center),
-                  new Padding(padding: EdgeInsets.all(10.0)),
-                  new Text(
-                      "Les QR Code Bleu permettent de controller les dires d'un formateur.",
+                  new Text("Les QR Codes Jaunes permettent de défier un expert.",
                       textAlign: TextAlign.center),
                   new Padding(padding: EdgeInsets.all(10.0)),
                   new Text(
-                      "Les QR Code Rouge permettent de rentrer dans l'arène et de défier d'autres joueurs.",
+                      "Les QR Codes Bleus permettent de contrôler les dires d'un formateur.",
+                      textAlign: TextAlign.center),
+                  new Padding(padding: EdgeInsets.all(10.0)),
+                  new Text(
+                      "Les QR Codes Rouges permettent de rentrer dans une arène pour défier d'autres joueurs.",
                       textAlign: TextAlign.center),
                   new Padding(padding: EdgeInsets.all(10.0)),
                   new Container(
