@@ -124,7 +124,7 @@ class Formateur1State extends State<Formateur1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Go'Reviz"),
+        title: Text("Reviz'Go"),
         backgroundColor: Colors.cyan,
         automaticallyImplyLeading: false,
       ),
