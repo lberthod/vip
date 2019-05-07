@@ -41,7 +41,7 @@ class Quizz {
   var questions = [
     //  "Un animal s’approche de vous...",
 
-    "Pour l’approche marketing de ton entreprise, pourquoi est il important de poser des questions ouvertes lors de ton premier entretien ?",
+    "Pour l’approche marketing de ton entreprise, pourquoi est-il important de poser des questions ouvertes lors de ton premier entretien ?",
     "Cite un type de graphique que tu pourrais utiliser pour représenter les 'départs' en 2008 et en 2009 ?",
     "Une stratégie de marketing différenciée consiste à :",
   ];
@@ -71,16 +71,16 @@ class Quizz {
     //answer 2
     [
       "Diagramme en barre ou Histogramme",
-      "Diagramme en courbSes",
+      "Diagramme en courbes",
       "Camembert",
       "Radar",
     ],
 
     //answer 3
     [
-      "Exploiter au moins deux segments du marché et à concevoir des produits et plans d'action distincts pour chaque segments",
+      "Exploiter au moins deux segments du marché et à concevoir des produits et plans d'action distincts pour chaque segment",
       "Minimiser les différences entre les segments du marché",
-      "S'adresse à une seul couple produit-marché",
+      "S'adresse à un seul couple produit-marché",
       "Attaquer avec le même marketing-mix des segments différents",
     ],
   ];
@@ -298,7 +298,7 @@ Widget testing(List items, BuildContext context, DocumentSnapshot document) {
                     updateQuestion(context, document);
                   },
                   child: new Text(
-                    "Choisir la réponse 3",
+                    "Choisir la réponse 4",
                     style: new TextStyle(fontSize: 12.0, color: Colors.white),
                   ),
                 ),
@@ -344,7 +344,7 @@ class Quiz1State extends State<Quiz> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Go'Reviz"),
+        title: Text("Reviz'Go"),
         backgroundColor: Colors.cyan,
         automaticallyImplyLeading: false,
       ),
@@ -416,20 +416,20 @@ class Summary extends StatelessWidget {
 
 
     if (correct) {
-      text = "Vous avez répondu correctment à la dernière question ";
+      text = "Tu as répondu correctement à la dernière question.";
     } else {
-      text = "Vous avez donné une mauvaise réponse à la dernière question et la bonne réponse était : " + quiz.choices[questionNumber - 1]
+      text = "Tu as donné une mauvaise réponse à la dernière question. La bonne réponse était : " + quiz.choices[questionNumber - 1]
       [int.parse(quiz.correct[questionNumber - 1][0]) - 1];
     }
     FirestoreService<Player> db = new FirestoreService<Player>('joueur');
     FirestoreService<Player> db1 = new FirestoreService<Player>('joueur');
 
     if (points >= 2) {
-      manonT = "Bravo, tu as recruté un nouvel§ expert =) ";
+      manonT = "Bravo, tu as recruté un nouvel expert =) ";
       manonV = "3";
     } else {
       manonT =
-          " Dommage, tu n'as pas assez répondu correctement! L'expert s'en va.";
+          " Dommage, tu n'as pas suffisament répondu correctement! L'expert s'en va.";
       manonV = "2";
     }
 
@@ -678,7 +678,7 @@ class Summary extends StatelessWidget {
                     Navigator.of(context).pushNamed('/classement');
                   },
                   child: new Text(
-                    "Va checker le classement",
+                    "Va voir le classement",
                     style: new TextStyle(fontSize: 20.0, color: Colors.white),
                   ),
                 ),
@@ -735,7 +735,7 @@ class ReponseC extends StatelessWidget {
                   new Padding(padding: EdgeInsets.all(30.0)),
 
                   new Text(
-                    "Vous avez répondu correctement !",
+                    "Tu as répondu correctement !",
                     style: new TextStyle(fontSize: 35.0),
                     textAlign: TextAlign.center,
                   ),
@@ -794,7 +794,7 @@ class ReponseF extends StatelessWidget {
 
                   new Text(
 
-                    "Vous avez donner une mauvaise réponse!",
+                    "Tu as donné une mauvaise réponse !",
                     style: new TextStyle(fontSize: 35.0),
                     textAlign: TextAlign.center,
 
