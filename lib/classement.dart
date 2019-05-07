@@ -28,7 +28,7 @@ class AideState extends State<Classement> {
                 new Padding(padding: EdgeInsets.all(15.0)),
                 new Padding(padding: EdgeInsets.all(15.0)),
 
-new Text("Aller voir les classement ou revenir à l'accueil"),
+new Text("Aller voir les classements ou revenir à l'accueil"),
                 new Padding(padding: EdgeInsets.all(15.0)),
                 new Padding(padding: EdgeInsets.all(15.0)),
 
@@ -46,7 +46,7 @@ new Text("Aller voir les classement ou revenir à l'accueil"),
                             Navigator.of(context).pushNamed('/classementS');
                           },
                           child: new Text(
-                            "Classement Score",
+                            "Classement Scores",
                             style: new TextStyle(fontSize: 18, color: Colors.white),
                           )),
                       new Padding(padding: EdgeInsets.all(8.0)),
@@ -57,7 +57,7 @@ new Text("Aller voir les classement ou revenir à l'accueil"),
                             Navigator.of(context).pushNamed('/classementN');
                           },
                           child: new Text(
-                            "Classement Niveau",
+                            "Classement Equipe",
                             style: new TextStyle(fontSize: 18, color: Colors.white),
                           )),
                       new Padding(padding: EdgeInsets.all(8.0)),
