@@ -31,7 +31,7 @@ class PState extends State<introR> {
 
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("Go'Reviz"),
+        title: new Text("Reviz'Go"),
         backgroundColor: Colors.cyan,
         automaticallyImplyLeading: false,
 
@@ -56,12 +56,12 @@ class PState extends State<introR> {
 
             new Padding(padding: EdgeInsets.all(8.0)),
 
-            new Text("Bienvenu dans le Reviz'Dex" , style: new TextStyle(
+            new Text("Bienvenue dans le Reviz'Dex !" , style: new TextStyle(
                 fontSize: 18,
                 color: Colors.black
             ),),
             new Padding(padding: EdgeInsets.all(8.0)),
-            new Text("Choisi le domaine à réviser"),
+            new Text("Choisis le domaine à réviser"),
 
             new Padding(padding: EdgeInsets.all(20.0)),
             new MaterialButton(
@@ -84,7 +84,7 @@ class PState extends State<introR> {
                 color: Colors.green,
                 onPressed:(){Navigator.of(context).pushNamed('/revizdexAchat');
                },
-                child: new Text("Achat",
+                child: new Text("Achats",
                   style: new TextStyle(
                       fontSize: 18,
                       color: Colors.white
