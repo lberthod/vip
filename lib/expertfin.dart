@@ -67,7 +67,7 @@ class ExperFinState extends State<ExpertFin> {
 
                           },
 
-                          child: new Text("Classesment",
+                          child: new Text("Classement",
                             style: new TextStyle(
                                 fontSize: 18.0,
                                 color: Colors.white
