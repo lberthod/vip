@@ -70,7 +70,7 @@ class Quizz {
     //answer 2
     [
       "Diagramme en barre ou Histogramme",
-      "Diagramme en courbSes",
+      "Diagramme en courbes",
 
     ],
 
@@ -347,9 +347,9 @@ class Summary extends StatelessWidget {
     }
 
     if (correct) {
-      text = "Vous avez répondu correctement à la dernière question";
+      text = "Tu as répondu correctement à la dernière question";
     } else {
-      text = "Vous avez donné une mauvais réponse à la dernière question.  La bonne réponse était : " +
+      text = "Tu as donné une mauvais réponse à la dernière question. La bonne réponse était : " +
           quiz.choices[questionNumber-1][int.parse(quiz.correct[questionNumber - 1][0])-1];
     }
 
@@ -484,7 +484,7 @@ class ReponseC extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Text(
-                "Vous avez répondu correctement !",
+                "Tu as répondu correctement !",
                 style: new TextStyle(fontSize: 35.0),
               ),
 
@@ -535,7 +535,7 @@ class ReponseF extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 new Text(
-                  "Vous avez donné une mauvais réponse !",
+                  "Tu as donné une mauvais réponse !",
                   style: new TextStyle(fontSize: 27.0),
                 ),
                 new Padding(padding: EdgeInsets.all(30.0)),
