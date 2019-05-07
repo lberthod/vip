@@ -83,7 +83,7 @@ class ClassementState extends State<temp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Classemenst"),
+        title: Text("Classement"),
       ),
       body: StreamBuilder(
           stream: Firestore.instance.collection('user')
