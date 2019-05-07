@@ -72,7 +72,7 @@ class EquipeState extends State<Equipe> {
                   new Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                        "3 = Recruté avec une puissance 3  / 2 = Recruté avec une puissance 2 / 1 = A refusé de vous rejoindre / 0 = A découvrir"),
+                        "3 = Recruté avec une puissance 3 |  2 = Recruté avec une puissance 2 | 1 = A refusé de vous rejoindre | 0 = A découvrir"),
                   ),
                   new Padding(padding: EdgeInsets.all(15.0)),
 
